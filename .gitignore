@@ -1,0 +1,28 @@
+# .NET / C#
+bin/
+obj/
+*.user
+*.suo
+.vs/
+.idea/
+*.DotSettings.user
+
+# Exported builds
+[Bb]uild/
+[Bb]uilds/
+
+# Godot 4
+.godot/
+.mono/
+export_presets.cfg
+*.translation
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# Generated playtest & simulator outputs
+PlaytestScreenshots/
+Tools/balance_sim/out/
+
