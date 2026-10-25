@@ -1,0 +1,56 @@
+<!-- @dsCard height=288 -->
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><link rel="stylesheet" href="../bundle.css">
+<title>3 AM Glow</title>
+<style>
+  html, body { margin:0; height:100%; }
+  body { background:var(--wall, #221e42); color:var(--paper, #ede9ff); font-family:var(--font-body, "Nunito", sans-serif); overflow:hidden; }
+  .cover { position:relative; height:288px; overflow:hidden; }
+  .art { position:absolute; top:0; left:480px; width:480px; height:288px; overflow:hidden; }
+  .art svg { display:block; width:480px; height:288px; }
+  .shadow { fill:var(--ink, #0e0b1f); }
+  .edge { stroke:var(--ink, #0e0b1f); stroke-width:3; }
+  .dop { fill:var(--dopamine, #ff3d81); }
+  .eyes { fill:var(--eyes, #3ce6ff); }
+  .cash { fill:var(--cash, #b8ff3c); }
+  .myth { fill:var(--mythic, #ffd23c); }
+  .paper { fill:var(--paper, #ede9ff); }
+  .off { fill:var(--desk-edge, #3a2d5c); }
+  .words { position:absolute; left:28px; bottom:28px; max-width:440px; }
+  .name { margin:0; font-family:var(--font-display, "Bungee", sans-serif); font-weight:400; font-size:96px; line-height:.95; color:var(--paper, #ede9ff); }
+  .tag { margin:12px 0 0 4px; font-size:14px; line-height:20px; color:var(--muted, #b9b3e0); }
+</style>
+</head>
+<body>
+<div class="cover">
+<div class="art" aria-hidden="true">
+<svg viewBox="0 0 480 288" width="480" height="288">
+<!--
+  blocks      dopamine 200x150 (the loudest hue, largest) · eyes 150x110 · mythic 130x130 square (a post-it: radius 0) · cash 120x120 · paper 90x60 as the relief tint; about 30% of 960x288
+  arrangement a staggered pile of stickers, each tilted by a tilt token (-3, 2, 4, -5, 2 deg), every block with the stroke-sticker ink edge and its shadow-sticker 4px hard shadow drawn as an ink copy below
+  pattern     the HUD streak meter: five pills (four lit in mythic, one off in desk-edge) across the dopamine block; the brand's one recurring shape is the 5-step swipe streak
+  scales      corners radius-card 16 (dopamine, eyes), radius-chip 12 (cash, paper), post-it 0; pills 36x14 rx 7 (half the short side) at a 44px pitch; shadows 4px
+-->
+<g transform="rotate(-3 120 105)"><rect class="shadow" x="20" y="34" width="200" height="150" rx="16"/><rect class="dop edge" x="20" y="30" width="200" height="150" rx="16"/></g>
+<g transform="rotate(2 320 75)"><rect class="shadow" x="245" y="24" width="150" height="110" rx="16"/><rect class="eyes edge" x="245" y="20" width="150" height="110" rx="16"/></g>
+<g transform="rotate(4 225 215)"><rect class="shadow" x="160" y="154" width="130" height="130" rx="0"/><rect class="myth edge" x="160" y="150" width="130" height="130" rx="0"/></g>
+<g transform="rotate(-5 380 210)"><rect class="shadow" x="320" y="154" width="120" height="120" rx="12"/><rect class="cash edge" x="320" y="150" width="120" height="120" rx="12"/></g>
+<g transform="rotate(2 75 230)"><rect class="shadow" x="30" y="204" width="90" height="60" rx="12"/><rect class="paper edge" x="30" y="200" width="90" height="60" rx="12"/></g>
+<g transform="rotate(-3 120 105)">
+<rect class="myth edge" x="36" y="140" width="36" height="14" rx="7"/>
+<rect class="myth edge" x="80" y="140" width="36" height="14" rx="7"/>
+<rect class="myth edge" x="124" y="140" width="36" height="14" rx="7"/>
+<rect class="myth edge" x="168" y="140" width="36" height="14" rx="7"/>
+<rect class="off edge" x="212" y="140" width="36" height="14" rx="7"/>
+</g>
+</svg>
+</div>
+<div class="words">
+<h1 class="name">3 AM<br>Glow</h1>
+<p class="tag">La habitación a oscuras, el teléfono como única luz y cada pieza de interfaz una pegatina.</p>
+</div>
+</div>
+</body>
+</html>
