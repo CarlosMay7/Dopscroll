@@ -1,0 +1,146 @@
+{
+  "_comment": "LEGACY GDD v4 balance used only by Tools/balance_sim/sim.py. The game does NOT read this file; its balance lives in Data/balance.json. All times in seconds; battery capacity in 'charge-seconds' at 1.0x drain.",
+
+  "turn": {
+    "nightBaseSeconds": 95,
+    "tickSeconds": 0.1,
+    "nightShopOverheadSeconds": 20
+  },
+
+  "phone": {
+    "baseCapacity": 55,
+    "secondaryCapacity": 55,
+    "baseVideoSeconds": 3.0,
+    "transitionSeconds": 0.6,
+    "baseDopamine": 12,
+    "likeBonus": 0.25,
+    "mythicMultiplier": 50,
+    "mythicLikeMultiplier": 2,
+    "secondaryAutoScrollSeconds": 3.5,
+    "secondaryDopamineFactor": 0.65,
+    "adDrainMultiplier": 1.5,
+    "adAutoSkipSeconds": 4.0,
+    "screamerStunSeconds": 1.5
+  },
+
+  "speed": {
+    "1": { "drain": 1.0 },
+    "2": { "drain": 2.2 },
+    "5": { "drain": 5.5 }
+  },
+
+  "brightness": {
+    "low":    { "dopamine": 1.0,  "drain": 0.85, "fatigue": 1.65 },
+    "normal": { "dopamine": 1.0,  "drain": 1.0,  "fatigue": 1.0 },
+    "high":   { "dopamine": 1.40, "drain": 1.30, "fatigue": 1.15 }
+  },
+
+  "eyes": {
+    "fatiguePerSecond": 1.25,
+    "blurStartsBelow": 55,
+    "dropsUseBelow": 20,
+    "dropsRestore": 40,
+    "outageFatigueMultiplier": 1.3,
+    "blurDopaminePenalty": 0.55
+  },
+
+  "algorithm": {
+    "adWeight": 0.09,
+    "adWeightAfterBadLike": 0.15,
+    "badLikeDurationVideos": 10,
+    "screamerWeight": 0.025,
+    "mythicChance": 0.0006,
+    "mythicPityVideos": 480,
+    "nicheLikeWeightGain": 0.25,
+    "nicheMaxWeight": 6.0
+  },
+
+  "niches": {
+    "cats":   { "dopamine": 1.10, "fatigue": 0.80, "eyesOnLike": 8 },
+    "gaming": { "dopamine": 1.45, "fatigue": 1.30, "drain": 1.08 },
+    "asmr":   { "dopamine": 0.90, "drain": 0.78, "fatigue": 0.65 },
+    "memes":  { "dopamine": 0.82, "seconds": 1.7, "drain": 1.35, "fatigue": 1.15 }
+  },
+
+  "laptop": {
+    "alertIntervalMin": 25,
+    "alertIntervalMax": 30,
+    "alertWindowSeconds": 5,
+    "attendDelaySeconds": 0.7,
+    "baseSalary": 40
+  },
+
+  "bill": {
+    "everyDays": 3,
+    "base": 30,
+    "perSecondaryPhone": 12,
+    "perDevice": 8,
+    "perDay": 6,
+    "growthPerCycle": 1.14
+  },
+
+  "outlet": {
+    "basicMaxDevices": 3
+  },
+
+  "victory": {
+    "day": 30,
+    "dopamineCost": 1000000000,
+    "moneyCost": 1500
+  },
+
+  "prestige": {
+    "dopamineUnit": 450,
+    "divisor": 2.85,
+    "perDay": 0.15
+  },
+
+  "upgrades": {
+    "dopamine": [
+      { "id": "DOP_01", "name": "Hot Thumb",                   "baseCost": 15,    "costMult": 1.35, "maxLevel": 8,    "value": 0.05 },
+      { "id": "DOP_02", "name": "2x Playback",                 "baseCost": 50,    "costMult": 1.0,  "maxLevel": 1 },
+      { "id": "DOP_03", "name": "Short Attention Span",        "baseCost": 120,   "costMult": 1.6,  "maxLevel": 5,    "value": 0.1 },
+      { "id": "DOP_04", "name": "Clickbait Sense",             "baseCost": 250,   "costMult": 1.5,  "maxLevel": 5,    "value": 0.2 },
+      { "id": "DOP_05", "name": "Niche Training",              "baseCost": 400,   "costMult": 1.45, "maxLevel": 10,   "value": 0.015 },
+      { "id": "DOP_06", "name": "Algorithmic Insomnia (3 AM)", "baseCost": 1000,  "costMult": 2.0,  "maxLevel": 5,    "value": 0.8 },
+      { "id": "DOP_07", "name": "Jumpscare Junkie",            "baseCost": 1800,  "costMult": 1.8,  "maxLevel": 3,    "value": 2.0 },
+      { "id": "DOP_08", "name": "Hyperfocus (Slow-Mo)",        "baseCost": 3500,  "costMult": 2.2,  "maxLevel": 5,    "value": 0.10 },
+      { "id": "DOP_09", "name": "Split-Screen (Soap Cutting)", "baseCost": 8000,  "costMult": 1.0,  "maxLevel": 1,    "value": 2.0 },
+      { "id": "DOP_10", "name": "5x Speed (Overclock)",        "baseCost": 20000, "costMult": 1.0,  "maxLevel": 1 },
+      { "id": "DOP_11", "name": "Toxic Multitasking",          "baseCost": 600,   "costMult": 1.7,  "maxLevel": 10,   "value": 0.10 },
+      { "id": "DOP_12", "name": "Custom Algorithm",            "baseCost": 4000,  "costMult": 1.50, "maxLevel": null, "value": 0.20 }
+    ],
+    "money": [
+      { "id": "USD_01", "name": "Eye Drops",              "baseCost": 25,  "costMult": 1.4,  "maxLevel": 4,  "value": 1 },
+      { "id": "USD_02", "name": "Fast Charger",           "baseCost": 35,  "costMult": 1.45, "maxLevel": 6,  "value": 24 },
+      { "id": "USD_03", "name": "Double Espresso Mug",    "baseCost": 60,  "costMult": 1.0,  "maxLevel": 1,  "value": 0.25 },
+      { "id": "USD_04", "name": "Secondary Phone",        "baseCost": 100, "costStep": 60,   "maxLevel": 6 },
+      { "id": "USD_05", "name": "Blue-Light Glasses",     "baseCost": 120, "costMult": 1.0,  "maxLevel": 1,  "value": 0.5 },
+      { "id": "USD_06", "name": "20,000 mAh Power Bank",  "baseCost": 150, "costMult": 1.0,  "maxLevel": 1,  "value": 0.65 },
+      { "id": "USD_07", "name": "Fused Power Strip",      "baseCost": 180, "costMult": 1.0,  "maxLevel": 1 },
+      { "id": "USD_08", "name": "USB Desk Fan",           "baseCost": 200, "costMult": 1.0,  "maxLevel": 1,  "value": 0.35 },
+      { "id": "USD_09", "name": "Drinking Bird",          "baseCost": 250, "costMult": 1.0,  "maxLevel": 1 },
+      { "id": "USD_10", "name": "Office AI Script",       "baseCost": 300, "costMult": 1.0,  "maxLevel": 1,  "value": 40 },
+      { "id": "USD_11", "name": "Online Certificate",     "baseCost": 90,  "costMult": 1.55, "maxLevel": 6,  "value": 10 }
+    ],
+    "grass": [
+      { "id": "GRASS_01", "name": "Dopamine Tolerance",    "baseCost": 2, "costMult": 1.32, "maxLevel": null, "value": 0.42 },
+      { "id": "GRASS_02", "name": "Grandma's Stash",       "baseCost": 3, "costMult": 1.4,  "maxLevel": 10,   "value": 30 },
+      { "id": "GRASS_03", "name": "Tenured Contract",      "baseCost": 4, "costMult": 1.45, "maxLevel": 10,   "value": 8 },
+      { "id": "GRASS_04", "name": "Subsidized Grid Rate",  "baseCost": 5, "costMult": 1.6,  "maxLevel": 5,    "value": 0.06 },
+      { "id": "GRASS_05", "name": "Conditioned Lithium",   "baseCost": 4, "costMult": 1.5,  "maxLevel": 5,    "value": 0.12 },
+      { "id": "GRASS_06", "name": "Muscle Memory",         "baseCost": 6, "costMult": 1.0,  "maxLevel": 1 }
+    ]
+  },
+
+  "mythics": [
+    { "id": "MYT_01", "name": "The 3 AM Goblin",              "effect": "dopamine",       "value": 0.25 },
+    { "id": "MYT_02", "name": "240p Notepad Tutorial",        "effect": "salary",         "value": 20 },
+    { "id": "MYT_03", "name": "Unblinking Stare Man",         "effect": "fatigue",        "value": 0.2 },
+    { "id": "MYT_04", "name": "Lo-Fi Spinning Frog",          "effect": "secondarySpeed", "value": 0.3 },
+    { "id": "MYT_05", "name": "Pirate Broadcast Static",      "effect": "adSkip",         "value": 0.5 },
+    { "id": "MYT_06", "name": "Keyboard-Shredding Cat",       "effect": "likeCrit",       "value": 0.15 },
+    { "id": "MYT_07", "name": "Forbidden Microwave Recipe",   "effect": "battery",        "value": 0.15 },
+    { "id": "MYT_08", "name": "The Last Video on the Internet","effect": "doubler",       "value": 2 }
+  ]
+}

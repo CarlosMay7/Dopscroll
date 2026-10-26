@@ -1,0 +1,60 @@
+/* 3 AM Glow — static renditions of the game's Godot components for the previews.
+   Every value comes from tokens.json; the fallbacks are the same values so a preview still reads without tokens.css. */
+@font-face { font-family: "Bungee"; src: url("../../../Assets/Fonts/Bungee-Regular.ttf") format("truetype"); font-weight: 400; }
+@font-face { font-family: "Nunito"; src: url("../../../Assets/Fonts/Nunito-Variable.ttf") format("truetype"); font-weight: 200 1000; }
+@font-face { font-family: "VT323"; src: url("../../../Assets/Fonts/VT323-Regular.ttf") format("truetype"); font-weight: 400; }
+
+html, body { margin: 0; }
+body { font-family: var(--font-body, "Nunito", system-ui, sans-serif); font-weight: 800; color: var(--ink, #0e0b1f); }
+
+.g-night, .g-app, .g-cream, .g-lock, .g-video {
+  display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-16, 16px);
+  padding: 20px 24px; box-sizing: border-box; min-height: 100vh;
+}
+.g-night { background: var(--wall, #221e42); color: var(--paper, #ede9ff); }
+.g-app { background: var(--app-paper, #f4f1ff); }
+.g-cream { background: var(--app-cream, #fff7ec); }
+.g-lock { background: var(--lock-sky, #1b1640); color: #ffffff; }
+.g-video { background: var(--video-gaming, #2a1458); color: #ffffff; }
+.g-col { display: flex; flex-direction: column; gap: var(--space-12, 12px); }
+.g-cap { font-size: 13px; color: var(--muted, #b9b3e0); width: 100%; }
+.g-app .g-cap, .g-cream .g-cap { color: var(--app-muted, #5c5680); }
+
+/* The sticker: flat fill, 3px ink border, hard ink shadow. */
+.g-sticker {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px; box-sizing: border-box;
+  border: var(--stroke-sticker, 3px) solid var(--ink, #0e0b1f);
+  box-shadow: var(--shadow-sticker, 0 4px 0 0 #0e0b1f);
+  border-radius: var(--radius-sticker, 14px);
+  background: var(--paper, #ede9ff); color: var(--ink, #0e0b1f);
+}
+.g-btn { font-family: var(--font-display, "Bungee", sans-serif); font-weight: 400; font-size: 14px; padding: 6px 12px; border-radius: var(--radius-chip, 12px); }
+.g-btn.is-pressed { box-shadow: var(--shadow-sticker-pressed, 0 1px 0 0 #0e0b1f); transform: translateY(3px); }
+.g-btn.is-disabled { background: var(--desk-edge, #3a2d5c); color: var(--muted, #b9b3e0); box-shadow: 0 2px 0 0 var(--ink, #0e0b1f); }
+.g-cta { font-family: var(--font-display, "Bungee", sans-serif); font-size: 24px; padding: 12px 14px; border-radius: var(--radius-card, 16px); width: 100%; }
+.g-app-off { background: var(--app-line, #e3def5) !important; color: var(--app-muted, #5c5680); box-shadow: none; }
+
+.g-chip { font-family: var(--font-display, "Bungee", sans-serif); font-size: 17px; padding: 3px 10px; border-radius: var(--radius-chip, 12px); box-shadow: none; }
+.g-effect { font-family: var(--font-display, "Bungee", sans-serif); font-size: 14px; padding: 4px 10px; border-radius: var(--radius-chip-s, 10px); box-shadow: 0 3px 0 0 var(--ink, #0e0b1f); }
+
+.g-postit {
+  font-family: var(--font-mono, "VT323", monospace); font-size: 34px; line-height: 1.05; width: 230px; padding: 17px 19px;
+  border-radius: 0; background: var(--mythic, #ffd23c); display: block;
+}
+
+.g-tile { width: 58px; height: 58px; border-radius: 27%; flex-shrink: 0; box-shadow: none; }
+.g-tile img { width: 32px; height: 32px; }
+
+.g-card {
+  display: flex; align-items: center; gap: var(--space-12, 12px); padding: 12px; width: 460px;
+  background: #ffffff; border-radius: var(--radius-card, 16px);
+}
+.g-card.is-locked { background: var(--app-cream, #fff7ec); border-color: var(--locked-line, #8f88bf); box-shadow: none; }
+.g-card .t { display: flex; flex-direction: column; gap: 1px; flex: 1; min-width: 0; }
+.g-card .row { display: flex; gap: 8px; align-items: baseline; }
+.g-name { font-weight: 900; font-size: 18px; flex: 1; }
+.g-level { font-size: 15px; color: var(--app-muted, #5c5680); }
+.g-desc { font-size: 14px; color: var(--app-muted, #5c5680); }
+.g-effect-line { font-size: 15px; font-weight: 900; color: var(--app-text, #3d3866); }
+.g-short { font-size: 14px; font-weight: 900; color: var(--app-bad, #c2271f); }
+.g-price { font-family: var(--font-display, "Bungee", sans-serif); font-size: 16px; padding: 8px 10px; border-radius: var(--radius-chip, 12px); }

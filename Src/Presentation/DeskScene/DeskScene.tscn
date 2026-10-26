@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://b6x8d4m0q2w1p"]
+
+[ext_resource type="Script" uid="uid://ba5ms72qfdwqg" path="res://Src/Presentation/DeskScene/DeskSceneController.cs" id="1_desk"]
+
+[node name="DeskScene" type="Control" unique_id=1977996074]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_desk")
+
+[node name="Background" type="ColorRect" parent="." unique_id=2749985]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -889.0
+offset_top = 231.0
+offset_right = -889.0
+offset_bottom = 231.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.06, 0.05, 0.1, 1)
